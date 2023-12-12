@@ -9,4 +9,7 @@ rule makeFile:
 
 
 rule all:
-    input: ["file1.txt", "file3.txt", "file3.txt"]
+    input:
+        "file1.txt",
+        "file3.txt",
+        "file3.txt"
