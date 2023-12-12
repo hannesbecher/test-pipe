@@ -2,14 +2,11 @@
 rule makeFile:
     output:
         "file{sample}.txt"
+    threads: 1
+    resources:
+        mem_mb=1000
     shell:
         """
         touch {output}
         """
 
-
-rule all:
-    input:
-        "file1.txt",
-        "file3.txt",
-        "file3.txt"
