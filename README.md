@@ -17,5 +17,6 @@ cd <repo folder>
 snakemake -j 1 --cluster qsub --jobs 32 out/file1.txt out/file2.txt out/file3.txt
 # this works as well:
 #time snakemake -j 1 --drmaa  " -l h_vmem=32G" --jobs 32 -F out/file1.txt out/file2.txt out/file3.txt
+# Note the even though 32GB memory is specified as the default,
+# the job actually asks for what's stated in each specific rule's resources section (I think).
 ```
-The cluster submission code is different to what we are currently using for the TS pipeline.
