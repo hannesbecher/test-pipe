@@ -3,14 +3,15 @@ This is a test Snakemake pipeline for queue submission on Eddie
 
 The pipeline creates files with names starting with `file` and ending with `.txt`. It needs very little resources and jobs run quickly.
 
-Local execution:
+## Local execution
 ```
 git clone <this repo>
 cd <repo folder>
 snakemake -j 1 out/file1.txt out/file2.txt out/file3.txt
 ```
 
-Cluster execution (following the [snakemake docs](https://snakemake.readthedocs.io/en/stable/executing/cluster.html#generic-cluster-support)):
+## Cluster execution
+This is what you'd do on a WW node. It follows the [snakemake docs](https://snakemake.readthedocs.io/en/stable/executing/cluster.html#generic-cluster-support).
 ```
 git clone <this repo>
 cd <repo folder>
